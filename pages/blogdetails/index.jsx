@@ -68,7 +68,7 @@ const index = () => {
                             </div>
                             {/* contact_form */}
                             <div className="contact_from pt-70 topper10">
-                                <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                <form action="JavaScript:void(0)" method="POST" id="dreamit-form">
                                     <div className="contact_title">
                                         <h1>Leave Comment</h1>
                                     </div>

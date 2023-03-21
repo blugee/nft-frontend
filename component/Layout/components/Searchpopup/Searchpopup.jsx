@@ -3,10 +3,6 @@ import React, { useEffect, useState } from 'react'
 const Searchpopup = () => {
     const [search, setSearch] = useState()
 
-    useEffect(() => {
-        console.log("search>>>", search);
-    }, [search])
-
     return (
         <>
             <div className="search-popup">

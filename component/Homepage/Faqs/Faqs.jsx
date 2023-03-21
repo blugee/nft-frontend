@@ -32,11 +32,11 @@ const Faqs = () => {
 						<div className="col-lg-12">
 							<div className="tab-content text-center">
 								<ul className="tabs">
-									<li className="active" rel="tab1" onClick={() => setTab("General")} >General </li>
-									<li rel="tab2" onClick={() => setTab("Token")}> Token  </li>
-									<li rel="tab3" onClick={() => setTab("Client")}>  Client </li>
-									<li rel="tab4" onClick={() => setTab("Pre ICO")}> Pre ICO</li>
-									<li rel="tab5" onClick={() => setTab("Legal")}> Legal</li>
+									<li className={`${tab === "General" ? "active" : ''}`} rel="tab1" onClick={() => setTab("General")} >General </li>
+									<li className={`${tab === "Token" ? "active" : ''}`} rel="tab2" onClick={() => setTab("Token")}> Token  </li>
+									<li className={`${tab === "Client" ? "active" : ''}`} rel="tab3" onClick={() => setTab("Client")}>  Client </li>
+									<li className={`${tab === "Pre ICO" ? "active" : ''}`} rel="tab4" onClick={() => setTab("Pre ICO")}> Pre ICO</li>
+									<li className={`${tab === "Legal" ? "active" : ''}`} rel="tab5" onClick={() => setTab("Legal")}> Legal</li>
 								</ul>
 							</div>
 						</div>
@@ -46,7 +46,7 @@ const Faqs = () => {
 							<div className="tab_container">
 								<h3 className="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
 								{/* #tab1  */}
-								<div id="tab1" style={{display: tab === `General`? `block` : 'none'}} className="tab_content">
+								<div id="tab1" style={{ display: tab === `General` ? `block` : 'none' }} className="tab_content">
 									<ul className="accordion">
 										<li>
 											<a>What is ICO</a>
@@ -76,7 +76,7 @@ const Faqs = () => {
 								</div>
 								{/* #tab2  */}
 								<h3 className="tab_drawer_heading" rel="tab2"> Token  </h3>
-								<div id="tab2" style={{display: tab === `Token`? `block` : 'none'}} className="tab_content">
+								<div id="tab2" style={{ display: tab === `Token` ? `block` : 'none' }} className="tab_content">
 									<ul className="accordion">
 										<li>
 											<a>What cryptocurrencies can I use to purchase?</a>
@@ -106,7 +106,7 @@ const Faqs = () => {
 								</div>
 								{/* #tab3  */}
 								<h3 className="tab_drawer_heading" rel="tab3">  Client </h3>
-								<div id="tab3" style={{display: tab === `Client`? `block` : 'none'}} className="tab_content">
+								<div id="tab3" style={{ display: tab === `Client` ? `block` : 'none' }} className="tab_content">
 
 									<ul className="accordion">
 										<li>
@@ -137,7 +137,7 @@ const Faqs = () => {
 								</div>
 								{/* #tab4  */}
 								<h3 className="tab_drawer_heading" rel="tab4"> Pre ICO</h3>
-								<div id="tab4" style={{display: tab === `Pre ICO`? `block` : 'none'}} className="tab_content">
+								<div id="tab4" style={{ display: tab === `Pre ICO` ? `block` : 'none' }} className="tab_content">
 
 									<ul className="accordion">
 										<li>
@@ -169,7 +169,7 @@ const Faqs = () => {
 								</div>
 								{/* #tab5  */}
 								<h3 className="tab_drawer_heading" rel="tab5"> Legal</h3>
-								<div id="tab5" style={{display: tab === `Legal`? `block` : 'none'}} className="tab_content">
+								<div id="tab5" style={{ display: tab === `Legal` ? `block` : 'none' }} className="tab_content">
 									<ul className="accordion">
 										<li>
 											<a>What is ICO</a>

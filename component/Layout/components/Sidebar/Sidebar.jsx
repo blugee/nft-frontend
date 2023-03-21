@@ -18,7 +18,7 @@ const Sidebar = ({active, setActive}) => {
                             <div className="sidebar-info-contents">
                                 <div className="content-inner">
                                     <div className="logo">
-                                        <a href="index.html"><img src="assets/images/one.png" alt="" /></a>
+                                        <a href='JavaScript:void(0)'><img src="assets/images/HODL-DAO-LOGO.png" alt="" /></a>
                                     </div>
                                     <div className="content-text">
                                         <p className="text-white">The argument in placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas etiusto odio data center.</p>

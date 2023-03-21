@@ -1,6 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Carouselslider = () => {
+    const [countdown, setCountdown] = useState({
+        days: '',
+        hours: '',
+        minutes: '',
+        seconds: ''
+    });
+
+    useEffect(() => {
+        const countDownDate = new Date("November 30, 2023 15:37:25").getTime();
+
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            setCountdown({
+                days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds: Math.floor((distance % (1000 * 60)) / 1000)
+            })
+
+            if (distance < 0) {
+                clearInterval(interval);
+                setCountdown("EXPIRED")
+            }
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
             {/* Start Carousel Slider Section */}
@@ -47,14 +76,14 @@ const Carouselslider = () => {
                                 <div className="countdown-area">
                                     <div className="coundown-content">
                                         <div className="coundown-title-two">
-                                            <h4>token sale start now in</h4>
+                                            <h4>{countdown === "EXPIRED" ? "EXPIRED" : "token sale start now in"}</h4>
                                         </div>
                                         <div id="countdown-two">
                                             <ul>
-                                                <li><span id="days"></span> <p>Days</p></li>
-                                                <li className="frist"><span id="hours"></span> <p>Hours</p></li>
-                                                <li className="secound"><span id="minutes"></span> <p>Mins</p></li>
-                                                <li className="third"><span id="seconds"></span> <p>Sec</p></li>
+                                                <li><span id="days">{countdown.days}</span> <p>Days</p></li>
+                                                <li className="frist"><span id="hours">{countdown.hours}</span> <p>Hours</p></li>
+                                                <li className="secound"><span id="minutes">{countdown.minutes}</span> <p>Mins</p></li>
+                                                <li className="third"><span id="seconds">{countdown.seconds}</span> <p>Sec</p></li>
                                             </ul>
                                         </div>
                                     </div>

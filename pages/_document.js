@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <title>cryptozen -ICO cryptozen Landing & Cryptocurrency HTML5 Template</title>
+        <title>HODL-PROTOCOL</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Favicon  */}

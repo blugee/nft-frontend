@@ -1,7 +1,39 @@
 import Breatcome from '@/component/Breatcome/Breatcome';
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const index = () => {
+    useEffect(() => {
+        $('.resent_list').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            smartSpeed: 1500,
+            dots: true,
+            dotsEach: true,
+            nav: false,
+            navText: [" <i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                },
+                1199: {
+                    items: 1
+                },
+                1920: {
+                    items: 1
+                }
+            }
+        });
+    })
     return (
         <>
             <Breatcome pageName='blog Details' />
@@ -143,7 +175,7 @@ const index = () => {
                                     </ul>
                                 </div>
                             </div>
-                            {/* <div className="sidebar-box">
+                            <div className="sidebar-box">
                                 <div className="row">
                                     <div className="resent-post-iteam">
                                         <div className="col-lg-12">
@@ -196,7 +228,7 @@ const index = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>

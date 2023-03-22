@@ -10,7 +10,7 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="footer-location-box">
                                 <div className="footer-logo">
-                                    <img src="assets/images/HOC-DAO-LOGO.png" alt="Footer-logo" />
+                                    <img src="assets/images/hodl-non-profit-logo.png" alt="Footer-logo" />
                                 </div>
                                 <div className="footer-content">
                                     <p>There are many variations of pass of Lorem Ipsum available, but the majority have suffered</p>

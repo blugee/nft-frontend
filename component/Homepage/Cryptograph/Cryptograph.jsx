@@ -1,9 +1,85 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import Chart from 'chart.js/auto';
+
 
 const Cryptograph = () => {
+    
+    const myChartRef = useRef(null);
+    const yourChartRef = useRef(null);
+    let myChartInstance = null;
+    let yourChartInstance = null;
+
+    useEffect(() => {
+
+        (async function () {
+            var xValues = ["Contingency", "France", "Spain", "USA", "Argentina"];
+            var yValues = [40, 49, 44, 24, 15];
+            var barColors = [
+                "#AA3BC5",
+                "#09B1F2",
+                "#1FD5A4",
+                "#FEB81A",
+                "#F97431"
+            ];
+
+            if (myChartInstance) {
+                myChartInstance.destroy();
+            }
+            myChartInstance = new Chart(myChartRef.current, {
+                type: "polarArea",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        label: 'Dataset 1',
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "World Wide Wine Production 2018"
+                    },
+                }
+            });
+
+            // Style Two
+            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+            var yValues = [55, 49, 44, 24, 15];
+            var barColors = [
+                "#4DB866",
+                "#EDB019",
+                "#E36D23",
+                "#F08A1E",
+                "#39A2D1"
+            ];
+
+            if (yourChartInstance) {
+                yourChartInstance.destroy();
+            }
+            yourChartInstance = new Chart(yourChartRef.current, {
+                type: "doughnut",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "World Wide Wine Production 2018"
+                    },
+                }
+            });
+
+        })();
+    }, [])
+
+
     return (
         <>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js"></script>
             <div className="graph-section style-three pb-100">
                 <div className="container">
                     <div className="row upper14">
@@ -23,7 +99,7 @@ const Cryptograph = () => {
                     <div className="row upper15  pt-20">
                         <div className="col-lg-6 col-md-12">
                             <div className="single-chart">
-                                <canvas id="myChart" width="500" height="500"></canvas>
+                                <canvas ref={myChartRef} id="myChart" width="500" height="500"></canvas>
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="chart-menu">
@@ -51,7 +127,7 @@ const Cryptograph = () => {
                         </div>
                         <div className="col-lg-6 col-md-12">
                             <div className="single-chart-two">
-                                <canvas id="yourChart" width="350" height="350"></canvas>
+                                <canvas ref={yourChartRef} id="yourChart" width="350" height="350"></canvas>
                                 <div className="row upper13">
                                     <div className="col-lg-6">
                                         <div className="chart-menu">

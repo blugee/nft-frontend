@@ -1,6 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+// import 'datatables.net-dt/css/jquery.dataTables.css';
 
 const Cryptotable = () => {
+
+    const tableRef = useRef(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if (tableRef.current) {
+                $(tableRef.current).DataTable({
+                    destroy: true,
+                    paging: false,
+                    "bInfo" : false
+                });
+            }
+        }
+    }, []);
+
     return (
         <>
             <div className="table-section pt-80 pb-80">
@@ -12,7 +28,7 @@ const Cryptotable = () => {
                                 <span>+0.36%</span>
                                 <p>Market up in the last 24 hours</p>
                             </div>
-                            <table id="example" className="table table-striped table-bordered">
+                            <table ref={tableRef} className="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th id="all_token">All Tokens</th>

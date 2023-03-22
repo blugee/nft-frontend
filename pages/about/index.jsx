@@ -3,6 +3,7 @@ import Breatcome from '@/component/Breatcome/Breatcome';
 import Cryptograph from '@/component/Homepage/Cryptograph/Cryptograph';
 import Ourteam from '@/component/Ourteam/Ourteam';
 import Contactus from '@/component/About/Contactus/Contactus';
+import Token from '@/component/Token/Token';
 
 const About = () => {
 
@@ -157,6 +158,7 @@ const About = () => {
         </div>
       </div>
       <Cryptograph />
+      <Token />
       <Ourteam />
       <Contactus />
     </>

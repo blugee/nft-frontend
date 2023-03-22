@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <title>HODL-NONPROFIT</title>
+        <title>HODL-NON-PROFIT</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Favicon  */}

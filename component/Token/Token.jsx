@@ -1,9 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const Token = () => {
+
+    const router = useRouter();
+    const { pathname } = router;
+
+    useEffect(() => {
+        $('.token_list').owlCarousel({
+            loop: true,
+            autoplay: true,
+            smartSpeed: 2500,
+            autoplayTimeout: 4000,
+            dots: false,
+            dotsEach: false,
+            nav: false,
+            navText: ["<i class='flaticon-left-arrow-3''></i>", "<i class='flaticon-right-arrow-3''></i>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                },
+                1365: {
+                    items: 4
+                },
+                1500: {
+                    items: 4
+                },
+                1920: {
+                    items: 5
+                }
+            }
+        });
+    }, [])
+
     return (
         <>
-            <div className="token-section pt-100 pb-100">
+            <div className={`token-section ${pathname === '/token' ? "style-three" : ""} pt-100 pb-100`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

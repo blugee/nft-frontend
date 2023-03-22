@@ -98,39 +98,39 @@ $(document).ready(function(){
         }
     });
       //about //
-$('.token_list').owlCarousel({
-        loop: true,
-        autoplay:true,
-        smartSpeed:2500,
-        autoplayTimeout:4000,
-        dots:false,
-        dotsEach:false,
-        nav:false,
-        navText: ["<i class='flaticon-left-arrow-3''></i>", "<i class='flaticon-right-arrow-3''></i>"],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 3
-            },
-            992: {
-                items: 3
-            },
-            1000: {
-                items: 3
-            },
-             1365: {
-                items:4
-            },
-             1500: {
-                items:4
-            },
-            1920: {
-                items:5
-              }
-        }
-    });
+// $('.token_list').owlCarousel({
+//         loop: true,
+//         autoplay:true,
+//         smartSpeed:2500,
+//         autoplayTimeout:4000,
+//         dots:false,
+//         dotsEach:false,
+//         nav:false,
+//         navText: ["<i class='flaticon-left-arrow-3''></i>", "<i class='flaticon-right-arrow-3''></i>"],
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             768: {
+//                 items: 3
+//             },
+//             992: {
+//                 items: 3
+//             },
+//             1000: {
+//                 items: 3
+//             },
+//              1365: {
+//                 items:4
+//             },
+//              1500: {
+//                 items:4
+//             },
+//             1920: {
+//                 items:5
+//               }
+//         }
+//     });
       // testi //
 $('.testi_list').owlCarousel({
         loop: true,
@@ -222,36 +222,36 @@ $('.blog_list').owlCarousel({
 })(jQuery);
 
      //resent
-    $('.resent_list').owlCarousel({
-         loop: true,
-         autoplay: false,
-         autoplayTimeout:4000,
-         smartSpeed:1500,
-         dots:true,
-         dotsEach:true,
-         nav:false,
-         navText: [" <i class='fas fa-angle-left'></i>" , "<i class='fas fa-angle-right'></i>"],
-         responsive: {
-             0: {
-                 items: 1
-             },
-             768: {
-                 items: 1
-             },
-             992: {
-                 items: 1
-             },
-             1000: {
-                 items: 1
-             },
-             1199: {
-                 items: 1
-             },
-             1920: {
-                 items: 1
-            }
-        }
-    });
+    // $('.resent_list').owlCarousel({
+    //      loop: true,
+    //      autoplay: false,
+    //      autoplayTimeout:4000,
+    //      smartSpeed:1500,
+    //      dots:true,
+    //      dotsEach:true,
+    //      nav:false,
+    //      navText: [" <i class='fas fa-angle-left'></i>" , "<i class='fas fa-angle-right'></i>"],
+    //      responsive: {
+    //          0: {
+    //              items: 1
+    //          },
+    //          768: {
+    //              items: 1
+    //          },
+    //          992: {
+    //              items: 1
+    //          },
+    //          1000: {
+    //              items: 1
+    //          },
+    //          1199: {
+    //              items: 1
+    //          },
+    //          1920: {
+    //              items: 1
+    //         }
+    //     }
+    // });
          	 
     // Venubox
     $('.venobox').venobox({

@@ -15,8 +15,8 @@ const Header = () => {
                     <div className="row align-items-center d-flex">
                         <div className="col-lg-3">
                             <div className="header-logo">
-                                <Link className="main-logo" href='/'><img src="assets/images/HODL-DAO-LOGO.png" alt="" /> </Link>
-                                <Link className="stiky-logo" href='/'> <img src="assets/images/HODL-DAO-LOGO.png" alt="" /></Link>
+                                <Link className="main-logo" href='/'><img src="assets/images/hodl-foundation-logo.png" alt="" /> </Link>
+                                <Link className="stiky-logo" href='/'> <img src="assets/images/hodl-foundation-logo.png" alt="" /></Link>
                             </div>
                         </div>
                         <div className="col-lg-9">

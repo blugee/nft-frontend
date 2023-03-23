@@ -1,19 +1,52 @@
 import React, { useEffect, useRef } from 'react';
-// import 'datatables.net-dt/css/jquery.dataTables.css';
 
 const Cryptotable = () => {
 
     const tableRef = useRef(null);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            if (tableRef.current) {
-                $(tableRef.current).DataTable({
-                    destroy: true,
-                    paging: false,
-                    "bInfo" : false
-                });
-            }
+        $('ul.tabs li').last().addClass("tab_last");
+        if (tableRef.current) {
+            $(tableRef.current).DataTable({
+                destroy: true,
+                paging: false,
+                "bInfo": false
+            });
+
+            $('#avaiable').on('click', function () {
+                $('.single').show();
+                $('.double').hide();
+                $('.one').hide();
+                $('triple').hide();
+            });
+
+            $('#gainers').on('click', function () {
+                $('triple').show();
+                $('.single').hide();
+                $('.double').hide();
+            });
+
+            $('#losers').on('click', function () {
+                $('triple').hide();
+                $('.single').hide();
+                $('.double').hide();
+                $('.one').show();
+            });
+
+            $('#date').on('click', function () {
+                $('triple').hide();
+                $('.single').hide();
+                $('.double').hide();
+                $('.one').hide();
+                $('.two').show();
+            });
+            $('#all_token').on('click', function () {
+                $('triple').show();
+                $('.single').show();
+                $('.double').show();
+                $('.two').show();
+                $('.one').show();
+            });
         }
     }, []);
 

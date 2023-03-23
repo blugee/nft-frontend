@@ -39,7 +39,7 @@ const Carouselslider = () => {
                         <div className="col-lg-6 col-md-6">
                             <div className="slider-content">
                                 <h4 className="wow fadeInUp" data-wow-delay=".2s"> <span className="other">$</span>Secure & Safe Crypto Currency</h4>
-                                <h1 className="wow fadeInUp" data-wow-delay=".4s">Make your <span>Crypto</span> Transaction</h1>
+                                <h1 className="wow fadeInUp" data-wow-delay=".4s">A SWITZERLAND <span>NON-CUSTODIAL</span> FOUNDATION</h1>
                                 <p className="wow fadeInUp" data-wow-delay=".6s">Buy and Sales 100+ Cryptocurrencies with 20+ flat currencies market
                                     using bank transfers or your credit/debit card in your exchange type
                                     bitcoin establshed token area. </p>

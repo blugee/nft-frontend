@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Searchpopup from '../Searchpopup/Searchpopup'
 import Sidebar from '../Sidebar/Sidebar'
 import { useRouter } from 'next/router'
@@ -8,6 +8,14 @@ const Header = () => {
     const router = useRouter();
     const { pathname } = router;
     const [sidebar, setSidebar] = useState(false)
+
+    useEffect(() => {
+        $('.mobile-menu nav').meanmenu({
+            meanScreenWidth: "991",
+            meanMenuContainer: ".mobile-menu",
+            onePage: false,
+        })
+    }, [])
     return (
         <>
             <div className={`header-area ${pathname !== '/' ? 'style-three' : ''}`} id="sticky-header">

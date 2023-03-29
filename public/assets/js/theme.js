@@ -1,10 +1,10 @@
 $(document).ready(function(){
     // Mobile Menu
-    $('.mobile-menu nav').meanmenu({
-        meanScreenWidth: "991",
-        meanMenuContainer: ".mobile-menu",
-        onePage: false,
-    }); 
+    // $('.mobile-menu nav').meanmenu({
+    //     meanScreenWidth: "991",
+    //     meanMenuContainer: ".mobile-menu",
+    //     onePage: false,
+    // }); 
    //Counter Up
    $('.counter').counterUp({
      time: 1500
